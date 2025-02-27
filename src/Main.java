@@ -3,8 +3,9 @@ public class Main {
         // Unit Test for Cash class
 
         // Test setup
-        Exchange exchange = new NYSE("someAccessKey");
-        Cash dollar = new Cash(exchange, 100);
+        // Exchange exchange = new NYSE("someAccessKey");
+        Exchange fakeExchange = new FakeExchange();
+        Cash dollar = new Cash(fakeExchange, 100);
         System.out.println("Dollar: " + dollar.toString());
 
         // Test 'in' method of Cash
